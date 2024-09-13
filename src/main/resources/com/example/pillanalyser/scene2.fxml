@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="588.0" prefWidth="924.0" style="-fx-background-color: #dbf4ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pillanalyser.SecondSceneController">
+   <children>
+      <Pane layoutX="15.0" layoutY="7.0" prefHeight="383.0" prefWidth="284.0">
+         <children>
+            <ImageView fitHeight="268.0" fitWidth="294.0" layoutX="12.0" layoutY="98.0">
+               <image>
+                  <Image url="@360_F_167594893_dWtiBCm2kkQGeeIGcJSGKryKItZ8XAI1.jpg" />
+               </image>
+               <effect>
+                  <DropShadow height="22.36" offsetX="-6.0" offsetY="6.0" radius="10.985" width="23.58">
+                     <color>
+                        <Color red="0.298799991607666" green="0.4493066668510437" blue="0.8299999833106995" opacity="0.6100000143051147" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <Label fx:id="welcomeMessage" layoutX="12.0" layoutY="29.0" prefHeight="59.0" prefWidth="239.0" textOverrun="CLIP">
+               <font>
+                  <Font name="Cartographer Regular" size="33.0" />
+               </font>
+               <effect>
+                  <Reflection fraction="0.63" topOffset="-10.0" topOpacity="0.0">
+                     <input>
+                        <DropShadow height="12.16" offsetX="-3.0" offsetY="3.0" radius="5.58" width="12.16">
+                           <color>
+                              <Color red="0.08235294371843338" green="0.1725490242242813" blue="0.6196078658103943" />
+                           </color>
+                        </DropShadow>
+                     </input>
+                  </Reflection>
+               </effect>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="0.6912114014251782" startX="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.05882352963089943" green="0.40392157435417175" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Slider fx:id="hueSlider" layoutX="16.0" layoutY="51.0" onMouseDragged="#adjustHue" value="50.0" />
+            <Slider fx:id="saturationSlider" layoutX="161.0" layoutY="51.0" onMouseDragged="#adjustSaturation" value="50.0" />
+            <Text fill="#7594bf66" layoutX="67.0" layoutY="48.0" stroke="#5e8bda" strokeType="OUTSIDE" strokeWidth="0.0" text="Hue">
+               <font>
+                  <Font name="Avenir Next Condensed Heavy" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="#7594bf66" layoutX="181.0" layoutY="48.0" stroke="#5e8bda" strokeType="OUTSIDE" strokeWidth="0.0" text="Saturation">
+               <font>
+                  <Font name="Avenir Next Condensed Heavy" size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="333.0" layoutY="103.0" prefHeight="419.0" prefWidth="459.0" />
+      <ImageView fx:id="imgView" fitHeight="254.0" fitWidth="279.0" layoutX="33.0" layoutY="112.0" onMousePressed="#handleImageClick" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="412.0" fitWidth="459.0" layoutX="337.0" layoutY="105.0">
+         <image>
+            <Image url="@360_F_167594893_dWtiBCm2kkQGeeIGcJSGKryKItZ8XAI1.jpg" />
+         </image>
+         <effect>
+            <DropShadow height="13.77" offsetX="-6.0" offsetY="6.0" radius="8.192499999999999">
+               <color>
+                  <Color red="0.298799991607666" green="0.4493066668510437" blue="0.8299999833106995" opacity="0.6100000143051147" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="blackAndWhiteImage" fitHeight="392.0" fitWidth="436.0" layoutX="347.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="27.0" layoutY="446.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="294.0" style="-fx-background-color: #f0fbff;" text="BACK TO MAIN MENU">
+         <font>
+            <Font name="Cartographer Regular" size="22.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.2850356294536817">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3210282623767853" green="0.37875041365623474" blue="0.8157894611358643" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7916666865348816" green="0.9270833134651184" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <InnerShadow height="66.69" radius="44.269999999999996" width="112.39">
+               <color>
+                  <Color red="0.49537035822868347" green="0.6804012060165405" blue="1.0" />
+               </color>
+               <input>
+                  <DropShadow offsetX="-3.0" offsetY="3.0">
+                     <color>
+                        <Color red="0.051169589161872864" green="0.2080896645784378" blue="0.46052631735801697" />
+                     </color>
+                  </DropShadow>
+               </input>
+            </InnerShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <MenuBar layoutX="-6.0" layoutY="-2.0" prefHeight="30.0" prefWidth="960.0" style="-fx-background-color: #f0fbff;">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#open" text="Open" />
+                  <MenuItem mnemonicParsing="false" text="Save" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Revert To Original" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+         <effect>
+            <InnerShadow radius="19.58" width="59.32">
+               <color>
+                  <Color red="0.08796296268701553" green="0.4831790030002594" blue="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </MenuBar>
+      <Text fill="#7594bf66" layoutX="102.0" layoutY="406.0" stroke="#5e8bda" strokeType="OUTSIDE" strokeWidth="0.0" text="Original Image ">
+         <font>
+            <Font name="Avenir Next Condensed Heavy" size="22.0" />
+         </font>
+      </Text>
+      <Slider layoutX="324.0" layoutY="58.0" value="50.0" />
+      <Text fill="#7594bf66" layoutX="343.0" layoutY="56.0" stroke="#5e8bda" strokeType="OUTSIDE" strokeWidth="0.0" text="Brightness">
+         <font>
+            <Font name="Avenir Next Condensed Heavy" size="22.0" />
+         </font>
+      </Text>
+      <Button layoutX="135.0" layoutY="530.0" mnemonicParsing="false" onAction="#exit" prefHeight="43.0" prefWidth="71.0" style="-fx-background-color: #f0fbff;" text="EXIT">
+         <font>
+            <Font name="Cartographer Regular" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.2850356294536817">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3210282623767853" green="0.37875041365623474" blue="0.8157894611358643" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7916666865348816" green="0.9270833134651184" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <InnerShadow height="66.69" radius="44.269999999999996" width="112.39">
+               <color>
+                  <Color red="0.49537035822868347" green="0.6804012060165405" blue="1.0" />
+               </color>
+               <input>
+                  <DropShadow offsetX="-3.0" offsetY="3.0">
+                     <color>
+                        <Color red="0.051169589161872864" green="0.2080896645784378" blue="0.46052631735801697" />
+                     </color>
+                  </DropShadow>
+               </input>
+            </InnerShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="resetButton" layoutX="488.0" layoutY="36.0" mnemonicParsing="false" onAction="#clearImageView" prefHeight="44.0" prefWidth="98.0" style="-fx-background-color: #f0fbff;" text="Clear">
+         <font>
+            <Font name="Cartographer Regular" size="22.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.2850356294536817">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3210282623767853" green="0.37875041365623474" blue="0.8157894611358643" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7916666865348816" green="0.9270833134651184" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <InnerShadow height="66.69" radius="44.269999999999996" width="112.39">
+               <color>
+                  <Color red="0.49537035822868347" green="0.6804012060165405" blue="1.0" />
+               </color>
+               <input>
+                  <DropShadow offsetX="-3.0" offsetY="3.0">
+                     <color>
+                        <Color red="0.051169589161872864" green="0.2080896645784378" blue="0.46052631735801697" />
+                     </color>
+                  </DropShadow>
+               </input>
+            </InnerShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fill="#7594bf66" layoutX="805.0" layoutY="88.0" stroke="#5e8bda" strokeType="OUTSIDE" strokeWidth="0.0" text="File name:">
+         <font>
+            <Font name="Avenir Next Condensed Heavy" size="22.0" />
+         </font>
+      </Text>
+      <Text fill="#7594bf66" layoutX="805.0" layoutY="190.0" stroke="#5e8bda" strokeType="OUTSIDE" strokeWidth="0.0" text="File size:">
+         <font>
+            <Font name="Avenir Next Condensed Heavy" size="22.0" />
+         </font>
+      </Text>
+      <Label fx:id="fileName" layoutX="807.0" layoutY="97.0" prefHeight="17.0" prefWidth="123.0" />
+      <Label fx:id="fileSize" layoutX="807.0" layoutY="206.0" prefHeight="17.0" prefWidth="128.0" />
+      <Text fill="#7594bf66" layoutX="321.0" layoutY="558.0" stroke="#5e8bda" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Pills">
+         <font>
+            <Font name="Avenir Next Condensed Heavy" size="22.0" />
+         </font>
+      </Text>
+      <Label fx:id="totalPills" layoutX="426.0" layoutY="543.0" prefHeight="17.0" prefWidth="314.0" />
+      <Button fx:id="colorDis" layoutX="606.0" layoutY="49.0" mnemonicParsing="false" onAction="#colorDisjointSets" prefHeight="30.0" prefWidth="186.0" style="-fx-background-color: #f0fbff;" text="Sample Disjoint Sets">
+         <font>
+            <Font name="Cartographer Regular" size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.2850356294536817">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3210282623767853" green="0.37875041365623474" blue="0.8157894611358643" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7916666865348816" green="0.9270833134651184" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <InnerShadow height="66.69" radius="44.269999999999996" width="112.39">
+               <color>
+                  <Color red="0.49537035822868347" green="0.6804012060165405" blue="1.0" />
+               </color>
+               <input>
+                  <DropShadow offsetX="-3.0" offsetY="3.0">
+                     <color>
+                        <Color red="0.051169589161872864" green="0.2080896645784378" blue="0.46052631735801697" />
+                     </color>
+                  </DropShadow>
+               </input>
+            </InnerShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
